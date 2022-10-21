@@ -31,14 +31,14 @@ import org.mockito.runners.MockitoJUnitRunner;
  */
 @RunWith(MockitoJUnitRunner.class)
 public class DiagnosticErrorBuilderTest {
-    
+
     Path baseDir = Paths.get("src", "test", "java");
     Path testSourceDir = Paths.get("ninja", "diagnostics");
     Path relativeSourcePath = testSourceDir.resolve("DiagnosticErrorBuilderTest.java");
-    
+
     @Test
     public void stackTraceAnalysis() throws Exception {
-    
+
         // throw exception from this class!
         Exception e = null;
         try {
@@ -46,23 +46,23 @@ public class DiagnosticErrorBuilderTest {
         } catch (Exception ex) {
             e = ex;
         }
-        
+
         // since we are in "test" directory this shouldn't find anything
         Assert.assertNull(DiagnosticErrorBuilder.findFirstStackTraceElementWithSourceCodeInProject(e));
-        
+
         // change baseDir to "src/test/java"
         DiagnosticErrorBuilder.baseDirectory = baseDir.toString();
-        
+
         StackTraceElement ste = DiagnosticErrorBuilder.findFirstStackTraceElementWithSourceCodeInProject(e);
-        
+
         // should be first element in stacktrace
         Assert.assertSame(ste, e.getStackTrace()[0]);
-        
+
         // verify what relative path of source it calculates
         String path = DiagnosticErrorBuilder.getSourceCodeRelativePathForStackTraceElement(ste);
-        
+
         Assert.assertEquals(relativeSourcePath.toString(), path);
-        
+
     }
-    
+
 }

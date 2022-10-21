@@ -97,7 +97,7 @@ public class SourceSnippetHelper {
             // calculate intended range
             int intendedRange = lineTo - lineFrom;
             lineFrom = 1;
-            lineTo = lineFrom + intendedRange;
+            lineTo = lineFrom + intendedRange + 1;
         } else if (lineFrom < 0 && lineTo < 0) {
             if (lineFrom < lineTo) {
                 int intendedRange = -1 * (lineFrom - lineTo);

@@ -92,6 +92,8 @@
         <org-netbeans-modules-editor-indent.CodeStyle.project.text-limit-width>80</org-netbeans-modules-editor-indent.CodeStyle.project.text-limit-width>
         <org-netbeans-modules-editor-indent.CodeStyle.project.text-line-wrap>none</org-netbeans-modules-editor-indent.CodeStyle.project.text-line-wrap>
         <!-- end formatting options for Netbeans -->
+		 <sonar.organization>giosh6</sonar.organization>
+		 <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <!-- Fix version 1.8 of java compiler in all submodules: -->
@@ -929,5 +931,6 @@
         
         
     </dependencyManagement>
+	
     
 </project>

@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AutoStandalone",
+            "request": "launch",
+            "mainClass": "ninja.standalone.AutoStandalone",
+            "projectName": "ninja-core"
+        },
+        {
+            "type": "java",
+            "name": "Launch NinjaConsole",
+            "request": "launch",
+            "mainClass": "ninja.standalone.NinjaConsole",
+            "projectName": "ninja-core"
+        },
+        {
+            "type": "java",
+            "name": "Launch FakeDaemonMain",
+            "request": "launch",
+            "mainClass": "ninja.build.FakeDaemonMain",
+            "projectName": "ninja-maven-plugin"
+        },
+        {
+            "type": "java",
+            "name": "Launch NinjaJetty",
+            "request": "launch",
+            "mainClass": "ninja.standalone.NinjaJetty",
+            "projectName": "ninja-standalone"
+        },
+        {
+            "type": "java",
+            "name": "Launch RunNinjaJetty",
+            "request": "launch",
+            "mainClass": "ninja.standalone.RunNinjaJetty",
+            "projectName": "ninja-standalone"
+        }
+    ]
+}

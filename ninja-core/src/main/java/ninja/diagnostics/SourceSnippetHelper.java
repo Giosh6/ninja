@@ -102,7 +102,7 @@ public class SourceSnippetHelper {
             if (lineFrom < lineTo) {
                 int intendedRange = -1 * (lineFrom - lineTo);
                 lineFrom = 1;
-                lineTo = lineFrom + intendedRange;
+                lineTo = lineFrom + intendedRange + 1;
             } else {
                 // giving up
                 return null;
